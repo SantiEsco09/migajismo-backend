@@ -31,20 +31,8 @@ public class OrderService {
         double total = 0;
 
         for (OrderItem item : order.getItems()) {
-
-            var product = productRepo.findById(item.getProduct().getId())
-                    .orElseThrow(() -> new RuntimeException("Producto no encontrado"));
-
-            // ✔ CORRECCIÓN: asignar el producto real (no solo el ID)
-            item.setProduct(product);
-
-            item.setPrecioUnitario(product.getPrecio());
-            item.setSubtotal(product.getPrecio() * item.getCantidad());
-
-            // ✔ CORRECCIÓN: evitar recursión infinita
+            // subtotal ya viene del front
             item.setOrder(order);
-
-            total += item.getSubtotal();
         }
 
         order.setTotal(total);
@@ -60,10 +48,10 @@ public class OrderService {
     }
 
     // ---------------------------------------------------------
-    // LISTAR POR CORREO
+    // LISTAR POR TELÉFONO
     // ---------------------------------------------------------
-    public List<Order> listarPorCorreo(String correo) {
-        return orderRepo.findByClienteCorreo(correo);
+    public List<Order> listarPorTelefono(String telefono) {
+        return orderRepo.findByClienteTelefono(telefono);
     }
 
     // ---------------------------------------------------------

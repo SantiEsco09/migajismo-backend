@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface OrderRepository extends JpaRepository<Order, Long> {
 
-    List<Order> findByClienteCorreo(String correo);
+    List<Order> findByClienteTelefono(String clienteTelefono);
 
     List<Order> findByEstado(String estado);
 }

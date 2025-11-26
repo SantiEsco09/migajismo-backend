@@ -27,11 +27,6 @@ public class OrderController {
         return service.listarTodos();
     }
 
-    @GetMapping("/cliente/{correo}")
-    public List<Order> pedidosPorCorreo(@PathVariable String correo) {
-        return service.listarPorCorreo(correo);
-    }
-
     @GetMapping("/estado/{estado}")
     public List<Order> pedidosPorEstado(@PathVariable String estado) {
         return service.listarPorEstado(estado);

@@ -15,7 +15,6 @@ public class Order {
     private Long id;
 
     private String clienteNombre;
-    private String clienteCorreo;
     private String clienteDireccion;
     private String clienteTelefono;
 
@@ -41,9 +40,6 @@ public class Order {
 
     public String getClienteNombre() { return clienteNombre; }
     public void setClienteNombre(String clienteNombre) { this.clienteNombre = clienteNombre; }
-
-    public String getClienteCorreo() { return clienteCorreo; }
-    public void setClienteCorreo(String clienteCorreo) { this.clienteCorreo = clienteCorreo; }
 
     public String getClienteDireccion() { return clienteDireccion; }
     public void setClienteDireccion(String clienteDireccion) { this.clienteDireccion = clienteDireccion; }
