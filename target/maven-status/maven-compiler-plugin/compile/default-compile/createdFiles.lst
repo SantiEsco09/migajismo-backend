@@ -1,0 +1,5 @@
+com\example\migajismo_backend\service\EmployeeService.class
+com\example\migajismo_backend\model\Employee.class
+com\example\migajismo_backend\model\OrderItem.class
+com\example\migajismo_backend\repository\OrderItemRepository.class
+com\example\migajismo_backend\repository\OrderRepository.class
